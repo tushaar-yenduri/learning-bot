@@ -2,6 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from azure.storage.blob import BlobServiceClient
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # -------------------------------
 # CONFIG
@@ -16,7 +20,7 @@ START_PAGES = [
     "/react/"
 ]
 
-AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=learnixchunks;AccountKey=c5O2aFPFp1iPt142dllJAA9B1B47pjfE4BC7623AXXvXH+B/6CknmSKSt9Ysjvp4rx6+tlLnDEX6+AStN2SLfg==;EndpointSuffix=core.windows.net"
+AZURE_CONNECTION_STRING = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
 CONTAINER_NAME = "learnix-data"
 
 # -------------------------------
