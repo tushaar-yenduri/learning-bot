@@ -1,5 +1,8 @@
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SEARCH_ENDPOINT = os.getenv("SEARCH_ENDPOINT")
 API_KEY = os.getenv("SEARCH_KEY")

@@ -2,7 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
+
+load_dotenv()
 
 # -------------------------------
 # CONFIG

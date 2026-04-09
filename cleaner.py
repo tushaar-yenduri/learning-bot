@@ -1,6 +1,9 @@
 import json
 import os
+from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
+
+load_dotenv()
 
 # CONFIG
 CONNECTION_STRING= os.getenv("BLOB_CONNECTION_STRING")

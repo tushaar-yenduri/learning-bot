@@ -1,7 +1,10 @@
 import json
 from azure.storage.blob import BlobServiceClient
 import os
+from dotenv import load_dotenv
 from openai import AzureOpenAI
+
+load_dotenv()
 
 # -------------------------
 # CONFIG
