@@ -1,0 +1,38 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Python Virtual Env
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Dependencies
+pip-wheel-metadata/
+.Scout/
+
+# IDE & OS
+.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Runtime Data
+embeddings.json
+*.json  # sensitive generated data
+.DS_Store
+
+# Logs & Temp
+*.log
+temp/
+tmp/
+
+# VSCode Blackbox
+.blackbox/
+
