@@ -1,15 +1,16 @@
 import requests
+import os
 from openai import AzureOpenAI
 
 # -----------------------------
 # CONFIG
 # -----------------------------
-SEARCH_ENDPOINT = "https://learnix-search.search.windows.net"
-SEARCH_KEY = "sI3q6XzavPCe3xbZjUGQ23DzRBmsQHZe3aua70kU9WAzSeAWzSK3"
+SEARCH_ENDPOINT = os.getenv("SEARCH_ENDPOINT")
+SEARCH_KEY = os.getenv("SEARCH_KEY")
 INDEX_NAME = "learnix-index"
 
-AZURE_OPENAI_ENDPOINT = "https://learnix-openai.openai.azure.com/"
-AZURE_OPENAI_KEY = "3VFNyzILnc5BYbHp41wMDUbr0uXnCiGfX0syAEpjmCT3EJFJnXhbJQQJ99CDACYeBjFXJ3w3AAABACOGfYB2"
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
 
 EMBEDDING_DEPLOYMENT = "text-embedding-3-small"
 CHAT_DEPLOYMENT = "gpt-5.4-mini"

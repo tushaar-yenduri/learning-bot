@@ -1,15 +1,16 @@
 import json
 from azure.storage.blob import BlobServiceClient
+import os
 from openai import AzureOpenAI
 
 # -------------------------
 # CONFIG
 # -------------------------
-CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=learnixchunks;AccountKey=c5O2aFPFp1iPt142dllJAA9B1B47pjfE4BC7623AXXvXH+B/6CknmSKSt9Ysjvp4rx6+tlLnDEX6+AStN2SLfg==;EndpointSuffix=core.windows.net"
-CONTAINER = "learnix-data"
+CONNECTION_STRING = os.getenv("BLOB_CONNECTION_STRING") 
+CONTAINER = os.getenv("BLOB_CONTAINER")
 
-AZURE_OPENAI_KEY = "3VFNyzILnc5BYbHp41wMDUbr0uXnCiGfX0syAEpjmCT3EJFJnXhbJQQJ99CDACYeBjFXJ3w3AAABACOGfYB2"
-AZURE_OPENAI_ENDPOINT = "https://learnix-openai.openai.azure.com/"
+AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 

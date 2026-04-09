@@ -1,7 +1,8 @@
 import requests
+import os
 
-SEARCH_ENDPOINT = "https://learnix-search.search.windows.net"
-API_KEY = "sI3q6XzavPCe3xbZjUGQ23DzRBmsQHZe3aua70kU9WAzSeAWzSK3"
+SEARCH_ENDPOINT = os.getenv("SEARCH_ENDPOINT")
+API_KEY = os.getenv("SEARCH_KEY")
 
 url = f"{SEARCH_ENDPOINT}/indexes/learnix-index?api-version=2023-11-01"
 
