@@ -1,12 +1,8 @@
 import json
 import requests
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-SEARCH_ENDPOINT = os.getenv("AZURE_SEARCH_ENDPOINT")
-API_KEY = os.getenv("AZURE_SEARCH_API_KEY")
+SEARCH_ENDPOINT = "https://learnix-search.search.windows.net"
+API_KEY = "sI3q6XzavPCe3xbZjUGQ23DzRBmsQHZe3aua70kU9WAzSeAWzSK3"
 
 url = f"{SEARCH_ENDPOINT}/indexes/learnix-index/docs/index?api-version=2023-11-01"
 
